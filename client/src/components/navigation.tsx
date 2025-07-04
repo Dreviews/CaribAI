@@ -18,8 +18,17 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] flex items-center justify-center">
-              <span className="text-[var(--dark-bg)] font-bold text-sm">AI</span>
+            <div className="relative w-8 h-8">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] animate-pulse-slow"></div>
+              <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[var(--dark-bg)]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
+                  <circle cx="8" cy="8" r="1.5"/>
+                  <circle cx="16" cy="8" r="1.5"/>
+                  <path d="M12 15c2.2 0 4-1.8 4-4h-2c0 1.1-.9 2-2 2s-2-.9-2-2H8c0 2.2 1.8 4 4 4z"/>
+                  <path d="M7 13h2v2H7zM15 13h2v2h-2z"/>
+                </svg>
+              </div>
             </div>
             <span className="text-xl font-bold gradient-text">CaribAI</span>
           </div>
