@@ -127,7 +127,10 @@ CaribAI is a full-stack web application designed to provide AI-powered e-commerc
 
 ```
 Changelog:
-- July 04, 2025. Initial setup
+- July 04, 2025. Initial setup - Full-stack CaribAI website created
+- July 04, 2025. Updated logo to robot design for AI branding
+- July 04, 2025. Updated all images to feature diverse Caribbean people
+- July 04, 2025. Created GitHub Pages deployment setup with index.html and workflow
 ```
 
 ## User Preferences

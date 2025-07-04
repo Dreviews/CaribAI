@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>CaribAI - AI-Enhanced E-Commerce Automation & Marketing Agency for Caribbean Businesses</title>
+    <meta name="description" content="Transform your Caribbean business with AI-powered e-commerce solutions, custom websites, and intelligent marketing systems. Affordable pricing, 24/7 support, mobile-first approach.">
+    <meta property="og:title" content="CaribAI - AI-Enhanced E-Commerce Automation for Caribbean Businesses">
+    <meta property="og:description" content="Get AI-powered websites, booking systems, and customer support for your Caribbean business. From $300 setup with transparent pricing.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --background: hsl(240, 10%, 3.9%);
+        --foreground: hsl(0, 0%, 98%);
+        --muted: hsl(240, 3.7%, 15.9%);
+        --muted-foreground: hsl(240, 5%, 64.9%);
+        --popover: hsl(240, 10%, 3.9%);
+        --popover-foreground: hsl(0, 0%, 98%);
+        --card: hsl(240, 10%, 3.9%);
+        --card-foreground: hsl(0, 0%, 98%);
+        --border: hsl(240, 3.7%, 15.9%);
+        --input: hsl(240, 3.7%, 15.9%);
+        --primary: hsl(207, 90%, 54%);
+        --primary-foreground: hsl(211, 100%, 99%);
+        --secondary: hsl(240, 3.7%, 15.9%);
+        --secondary-foreground: hsl(0, 0%, 98%);
+        --accent: hsl(240, 3.7%, 15.9%);
+        --accent-foreground: hsl(0, 0%, 98%);
+        --destructive: hsl(0, 62.8%, 30.6%);
+        --destructive-foreground: hsl(0, 0%, 98%);
+        --ring: hsl(240, 4.9%, 83.9%);
+        --radius: 0.5rem;
+        
+        /* Custom CaribAI colors */
+        --neon-blue: hsl(195, 100%, 50%);
+        --neon-green: hsl(150, 100%, 50%);
+        --coral: hsl(6, 93%, 71%);
+        --dark-bg: hsl(0, 0%, 4%);
+        --dark-card: hsl(0, 0%, 7%);
+        --dark-border: hsl(0, 0%, 12%);
+      }
+
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background-color: var(--dark-bg);
+        color: var(--foreground);
+        overflow-x: hidden;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-green) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .tech-pattern {
+        background-image: 
+          radial-gradient(circle at 25% 25%, hsla(195, 100%, 50%, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 75% 75%, hsla(150, 100%, 50%, 0.1) 0%, transparent 50%);
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .animate-pulse-slow {
+        animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      .animate-glow {
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes float {
+        0%, 100% { 
+          transform: translateY(0px); 
+        }
+        50% { 
+          transform: translateY(-10px); 
+        }
+      }
+
+      @keyframes glow {
+        from { 
+          box-shadow: 0 0 20px hsla(195, 100%, 50%, 0.5); 
+        }
+        to { 
+          box-shadow: 0 0 30px hsla(195, 100%, 50%, 0.8); 
+        }
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--dark-bg);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--neon-blue);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--neon-green);
+      }
+
+      /* Tailwind custom config */
+      .bg-dark-bg { background-color: var(--dark-bg); }
+      .bg-dark-card { background-color: var(--dark-card); }
+      .border-dark-border { border-color: var(--dark-border); }
+      .text-neon-blue { color: var(--neon-blue); }
+      .text-neon-green { color: var(--neon-green); }
+      .text-coral { color: var(--coral); }
+      .bg-neon-blue { background-color: var(--neon-blue); }
+      .bg-neon-green { background-color: var(--neon-green); }
+      .bg-coral { background-color: var(--coral); }
+      .border-neon-blue { border-color: var(--neon-blue); }
+      .border-neon-green { border-color: var(--neon-green); }
+      .border-coral { border-color: var(--coral); }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Navigation -->
+      <nav class="fixed top-0 w-full z-50 backdrop-blur-md border-b border-dark-border" style="background-color: rgba(4, 4, 4, 0.9);">
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-2">
+              <div class="relative w-8 h-8">
+                <div class="absolute inset-0 rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] animate-pulse-slow"></div>
+                <div class="relative w-full h-full rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] flex items-center justify-center">
+                  <svg class="w-6 h-6 text-[var(--dark-bg)]" fill="currentColor" viewBox="0 0 24 24">
+                    <!-- Robot head -->
+                    <rect x="6" y="4" width="12" height="8" rx="2" />
+                    <!-- Robot eyes -->
+                    <circle cx="9" cy="7" r="1" />
+                    <circle cx="15" cy="7" r="1" />
+                    <!-- Robot mouth -->
+                    <rect x="10" y="9" width="4" height="1" rx="0.5" />
+                    <!-- Robot body -->
+                    <rect x="8" y="12" width="8" height="6" rx="1" />
+                    <!-- Robot arms -->
+                    <rect x="5" y="13" width="2" height="4" rx="1" />
+                    <rect x="17" y="13" width="2" height="4" rx="1" />
+                    <!-- Robot legs -->
+                    <rect x="9" y="18" width="2" height="4" rx="1" />
+                    <rect x="13" y="18" width="2" height="4" rx="1" />
+                    <!-- Robot antenna -->
+                    <circle cx="12" cy="2" r="1" />
+                    <line x1="12" y1="3" x2="12" y2="4" stroke-width="1" stroke="currentColor" />
+                  </svg>
+                </div>
+              </div>
+              <span class="text-xl font-bold gradient-text">CaribAI</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+              <a href="#services" class="text-white hover:text-[var(--neon-blue)] transition-colors">Services</a>
+              <a href="#about" class="text-white hover:text-[var(--neon-blue)] transition-colors">About</a>
+              <a href="#contact" class="text-white hover:text-[var(--neon-blue)] transition-colors">Contact</a>
+              <a href="#contact" class="bg-gradient-to-r from-[var(--neon-blue)] to-[var(--neon-green)] text-[var(--dark-bg)] px-6 py-2 rounded-lg hover:shadow-lg transition-all">
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="relative min-h-screen flex items-center justify-center tech-pattern">
+        <div class="container mx-auto px-4 pt-20">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+              <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <span class="gradient-text">AI-Powered</span><br />
+                E-Commerce Solutions<br />
+                <span class="text-coral">for Caribbean Businesses</span>
+              </h1>
+              <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+                Transform your local business with cutting-edge AI automation, custom websites, and intelligent marketing systems designed specifically for the Caribbean market.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#contact" class="bg-gradient-to-r from-[var(--neon-blue)] to-[var(--neon-green)] text-[var(--dark-bg)] px-8 py-4 text-lg rounded-lg hover:shadow-lg transition-all animate-glow">
+                  Start Your Digital Journey
+                </a>
+                <a href="#about" class="border-2 border-[var(--neon-blue)] text-[var(--neon-blue)] px-8 py-4 text-lg rounded-lg hover:bg-[var(--neon-blue)] hover:text-[var(--dark-bg)] transition-all">
+                  See Our Work
+                </a>
+              </div>
+            </div>
+            <div class="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                alt="Caribbean business owners collaborating with technology" 
+                class="rounded-2xl shadow-2xl animate-float" 
+              />
+              <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-[var(--neon-green)] to-[var(--neon-blue)] rounded-full animate-pulse-slow"></div>
+              <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-coral rounded-full animate-pulse-slow"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20 bg-dark-card">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              <span class="gradient-text">Our Services</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive digital solutions tailored for Caribbean businesses, from simple websites to advanced AI automation.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- Service 1: Website + Booking System -->
+            <div class="bg-dark-bg border border-dark-border rounded-xl p-6 hover:border-[var(--neon-blue)] hover:shadow-xl transition-all">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] rounded-xl flex items-center justify-center mr-4">
+                  <svg class="text-[var(--dark-bg)] w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-2xl text-neon-blue font-semibold">Website + Booking System</h3>
+                  <p class="text-gray-400">Professional Digital Presence</p>
+                </div>
+              </div>
+              
+              <img 
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
+                alt="Modern website booking interface" 
+                class="rounded-xl mb-6 w-full h-48 object-cover" 
+              />
+              
+              <div class="space-y-4 mb-6">
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Custom responsive website design</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Integrated booking & scheduling system</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Mobile-optimized for Caribbean users</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Payment processing integration</span>
+                </div>
+              </div>
+              
+              <div class="bg-[var(--dark-border)] rounded-xl p-4 mb-6">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-2xl font-bold text-neon-blue">$300-$500</span>
+                    <span class="text-gray-400 ml-2">setup</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xl font-semibold text-neon-green">$50/mo</span>
+                    <div class="text-sm text-gray-400">maintenance</div>
+                  </div>
+                </div>
+              </div>
+              
+              <a href="#contact" class="w-full block text-center bg-gradient-to-r from-[var(--neon-blue)] to-[var(--neon-green)] text-[var(--dark-bg)] py-3 rounded-lg hover:shadow-lg transition-all">
+                Get Your Website
+              </a>
+            </div>
+
+            <!-- Service 2: AI Sales Agent + Customer Support -->
+            <div class="bg-dark-bg border border-dark-border rounded-xl p-6 hover:border-[var(--neon-green)] hover:shadow-xl transition-all">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-[var(--neon-green)] to-[var(--coral)] rounded-xl flex items-center justify-center mr-4">
+                  <svg class="text-[var(--dark-bg)] w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-2xl text-neon-green font-semibold">AI Sales Agent + Support</h3>
+                  <p class="text-gray-400">Intelligent Customer Experience</p>
+                </div>
+              </div>
+              
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
+                alt="AI chatbot customer service interface" 
+                class="rounded-xl mb-6 w-full h-48 object-cover" 
+              />
+              
+              <div class="space-y-4 mb-6">
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>24/7 AI-powered customer support</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Intelligent sales conversation flows</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Multi-language support (EN/ES/FR)</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Lead qualification & nurturing</span>
+                </div>
+              </div>
+              
+              <div class="bg-[var(--dark-border)] rounded-xl p-4 mb-6">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-2xl font-bold text-neon-green">$500</span>
+                    <span class="text-gray-400 ml-2">setup</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xl font-semibold text-coral">$75-$150/mo</span>
+                    <div class="text-sm text-gray-400">based on usage</div>
+                  </div>
+                </div>
+              </div>
+              
+              <a href="#contact" class="w-full block text-center bg-gradient-to-r from-[var(--neon-green)] to-[var(--coral)] text-[var(--dark-bg)] py-3 rounded-lg hover:shadow-lg transition-all">
+                Deploy AI Agent
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 bg-dark-card">
+        <div class="container mx-auto px-4">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                <span class="gradient-text">About CaribAI</span>
+              </h2>
+              <p class="text-xl text-gray-300 mb-6">
+                We're a Caribbean-focused digital transformation agency specializing in AI-powered e-commerce solutions. Our mission is to bridge the digital divide by making advanced technology accessible to local businesses.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <span class="text-neon-blue mr-4">🧠</span>
+                  <span>5+ years in AI and automation</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-4">📍</span>
+                  <span>Caribbean market expertise</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-coral mr-4">🤝</span>
+                  <span>100+ local businesses served</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-blue mr-4">📱</span>
+                  <span>Mobile-first design approach</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                alt="Digital business automation dashboard" 
+                class="rounded-2xl shadow-2xl" 
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-dark-bg">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              <span class="gradient-text">Ready to Get Started?</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+              Let's discuss how AI can transform your Caribbean business. Get a free consultation and custom proposal.
+            </p>
+          </div>
+
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+              <div class="flex flex-col items-center p-6 bg-dark-card rounded-xl">
+                <div class="w-16 h-16 bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] rounded-full flex items-center justify-center mb-4">
+                  <span class="text-2xl">📞</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                <p class="text-gray-400">+1 (246) 555-0123</p>
+              </div>
+              
+              <div class="flex flex-col items-center p-6 bg-dark-card rounded-xl">
+                <div class="w-16 h-16 bg-gradient-to-br from-[var(--neon-green)] to-[var(--coral)] rounded-full flex items-center justify-center mb-4">
+                  <span class="text-2xl">✉️</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Email</h3>
+                <p class="text-gray-400">hello@caribai.com</p>
+              </div>
+              
+              <div class="flex flex-col items-center p-6 bg-dark-card rounded-xl">
+                <div class="w-16 h-16 bg-gradient-to-br from-[var(--coral)] to-[var(--neon-blue)] rounded-full flex items-center justify-center mb-4">
+                  <span class="text-2xl">📅</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Schedule</h3>
+                <p class="text-gray-400">Book a consultation</p>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-[var(--neon-blue)]/20 to-[var(--neon-green)]/20 border border-[var(--neon-blue)]/30 rounded-xl p-8">
+              <h3 class="text-2xl font-bold text-neon-blue mb-6">Why Choose CaribAI?</h3>
+              <div class="grid md:grid-cols-2 gap-4 text-left">
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Caribbean market expertise</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Transparent, affordable pricing</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>24/7 technical support</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Mobile-first approach</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>No long-term contracts</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-neon-green mr-3">✓</span>
+                  <span>Local Caribbean focus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-12 bg-dark-card border-t border-dark-border">
+        <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-4 gap-8">
+            <div>
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="relative w-8 h-8">
+                  <div class="absolute inset-0 rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] animate-pulse-slow"></div>
+                  <div class="relative w-full h-full rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] flex items-center justify-center">
+                    <svg class="w-6 h-6 text-[var(--dark-bg)]" fill="currentColor" viewBox="0 0 24 24">
+                      <!-- Robot head -->
+                      <rect x="6" y="4" width="12" height="8" rx="2" />
+                      <!-- Robot eyes -->
+                      <circle cx="9" cy="7" r="1" />
+                      <circle cx="15" cy="7" r="1" />
+                      <!-- Robot mouth -->
+                      <rect x="10" y="9" width="4" height="1" rx="0.5" />
+                      <!-- Robot body -->
+                      <rect x="8" y="12" width="8" height="6" rx="1" />
+                      <!-- Robot arms -->
+                      <rect x="5" y="13" width="2" height="4" rx="1" />
+                      <rect x="17" y="13" width="2" height="4" rx="1" />
+                      <!-- Robot legs -->
+                      <rect x="9" y="18" width="2" height="4" rx="1" />
+                      <rect x="13" y="18" width="2" height="4" rx="1" />
+                      <!-- Robot antenna -->
+                      <circle cx="12" cy="2" r="1" />
+                      <line x1="12" y1="3" x2="12" y2="4" stroke-width="1" stroke="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+                <span class="text-xl font-bold gradient-text">CaribAI</span>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Empowering Caribbean businesses with AI-driven e-commerce solutions and digital transformation.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Services</h4>
+              <ul class="space-y-2 text-sm text-gray-400">
+                <li><a href="#" class="hover:text-neon-blue transition-colors">Website Development</a></li>
+                <li><a href="#" class="hover:text-neon-blue transition-colors">AI Sales Agents</a></li>
+                <li><a href="#" class="hover:text-neon-blue transition-colors">E-commerce Automation</a></li>
+                <li><a href="#" class="hover:text-neon-blue transition-colors">Digital Marketing</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Company</h4>
+              <ul class="space-y-2 text-sm text-gray-400">
+                <li><a href="#" class="hover:text-neon-blue transition-colors">About Us</a></li>
+                <li><a href="#" class="hover:text-neon-blue transition-colors">Case Studies</a></li>
+                <li><a href="#" class="hover:text-neon-blue transition-colors">Blog</a></li>
+                <li><a href="#" class="hover:text-neon-blue transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Connect</h4>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-neon-blue transition-colors">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-neon-blue transition-colors">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-neon-blue transition-colors">Instagram</a>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-dark-border mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 CaribAI. All rights reserved. Proudly serving the Caribbean business community.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Simple smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
