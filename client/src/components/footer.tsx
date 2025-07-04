@@ -10,12 +10,25 @@ export default function Footer() {
               <div className="relative w-8 h-8">
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] animate-pulse-slow"></div>
                 <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-[var(--neon-blue)] to-[var(--neon-green)] flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[var(--dark-bg)]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
-                    <circle cx="8" cy="8" r="1.5"/>
-                    <circle cx="16" cy="8" r="1.5"/>
-                    <path d="M12 15c2.2 0 4-1.8 4-4h-2c0 1.1-.9 2-2 2s-2-.9-2-2H8c0 2.2 1.8 4 4 4z"/>
-                    <path d="M7 13h2v2H7zM15 13h2v2h-2z"/>
+                  <svg className="w-6 h-6 text-[var(--dark-bg)]" fill="currentColor" viewBox="0 0 24 24">
+                    {/* Robot head */}
+                    <rect x="6" y="4" width="12" height="8" rx="2" />
+                    {/* Robot eyes */}
+                    <circle cx="9" cy="7" r="1" />
+                    <circle cx="15" cy="7" r="1" />
+                    {/* Robot mouth */}
+                    <rect x="10" y="9" width="4" height="1" rx="0.5" />
+                    {/* Robot body */}
+                    <rect x="8" y="12" width="8" height="6" rx="1" />
+                    {/* Robot arms */}
+                    <rect x="5" y="13" width="2" height="4" rx="1" />
+                    <rect x="17" y="13" width="2" height="4" rx="1" />
+                    {/* Robot legs */}
+                    <rect x="9" y="18" width="2" height="4" rx="1" />
+                    <rect x="13" y="18" width="2" height="4" rx="1" />
+                    {/* Robot antenna */}
+                    <circle cx="12" cy="2" r="1" />
+                    <line x1="12" y1="3" x2="12" y2="4" strokeWidth="1" stroke="currentColor" />
                   </svg>
                 </div>
               </div>
