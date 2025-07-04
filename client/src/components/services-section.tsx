@@ -38,7 +38,7 @@ export default function ServicesSection() {
             </CardHeader>
             <CardContent>
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
                 alt="Modern website booking interface" 
                 className="rounded-xl mb-6 w-full h-48 object-cover group-hover:scale-105 transition-transform" 
               />
@@ -99,7 +99,7 @@ export default function ServicesSection() {
             </CardHeader>
             <CardContent>
               <img 
-                src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
                 alt="AI chatbot customer service interface" 
                 className="rounded-xl mb-6 w-full h-48 object-cover group-hover:scale-105 transition-transform" 
               />
@@ -160,7 +160,7 @@ export default function ServicesSection() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                src="https://images.unsplash.com/photo-1594736797933-d0d5ad6f5db7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
                 alt="Caribbean restaurant owner managing online orders" 
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-[var(--neon-blue)]" 
               />
@@ -170,7 +170,7 @@ export default function ServicesSection() {
             
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
                 alt="Caribbean boutique owner with digital presence" 
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-[var(--neon-green)]" 
               />
@@ -180,7 +180,7 @@ export default function ServicesSection() {
             
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
                 alt="Caribbean tour guide with booking system" 
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-[var(--coral)]" 
               />
@@ -190,7 +190,7 @@ export default function ServicesSection() {
             
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
                 alt="Caribbean fitness instructor with digital platform" 
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-[var(--neon-blue)]" 
               />
